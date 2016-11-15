@@ -1,0 +1,13 @@
+Package: TJNU.fnirslab
+Title: Data Analysis Package for fNIRS Lab in Tianjin Normal University 
+Version: 0.0.0.9000
+Authors@R: person("Xiaokai", "Xia", email = "dddd1007@gmail.com", role = c("aut", "cre"))
+Description: Data Analysis Package for fNIRS Lab in Tianjin Normal University
+Depends: R (>= 3.3.2)
+Imports:
+    R.matlab,
+    stringr,
+    readr,
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
