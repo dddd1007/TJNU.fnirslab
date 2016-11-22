@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n#                       _oo0oo_\n#                      o8888888o\n#                      88\" . \"88\n#                      (| -_- |)\n#                      0\\  =  /0\n#                    ___/`---'\\___\n#                  .' \\\\|     |# '.\n#                 / \\\\|||  :  |||# \\\n#                / _||||| -:- |||||- \\\n#               |   | \\\\\\  -  #/ |   |\n#               | \\_|  ''\\---/''  |_/ |\n#               \\  .-\\__  '-'  ___/-. /\n#             ___'. .'  /--.--\\  `. .'___\n#          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\n#         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n#         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\n#     =====`-.____`.___ \\_____/___.-`___.-'=====\n#                       `=---='\n#\n#\n#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\n#               佛祖保佑         永无BUG\n#\n# 天津师范大学 心理与行为研究院 近红外组\n# 夏骁凯 编写\n# 有问题请联系 dddd1007@gmail.com\n\nget_onset <- function(filename, onsetnumber){\n  matfile <- R.matlab::readMat(filename)\n  onset_mat <- unlist(matfile[1]$nirs.data[7])\n  trail_num <- length(onsetnumber)\n  result <- data.frame(matrix(0, ncol = 2, nrow = trail_num))\n  colnames(result) <- c(\"onset\", \"scans\")\n\n  for(i in 1 : trail_num){\n  onset_detect <- onsetnumber[i]\n  result[i,1] <- onset_detect\n  result[i,2] <- stringr::str_c(as.character(which(onset_mat == onset_detect)), collapse = \" \")\n  }\n\n  myfilename <- stringr::str_sub(filename, start = 1, end = -5)\n  myfilename <- stringr::str_c(myfilename,\"_onset\",\".csv\", sep = \"\")\n  write.csv(result, myfilename)\n}\n",
+    "created" : 1479446607214.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3811161362",
+    "id" : "436EA65E",
+    "lastKnownWriteTime" : 1479803417,
+    "last_content_update" : 1479803417388,
+    "path" : "~/Documents/Code/TJNU.fnirslab/R/convertfile/get_onset.R",
+    "project_path" : "R/convertfile/get_onset.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
