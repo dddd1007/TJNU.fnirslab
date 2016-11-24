@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n#                       _oo0oo_\n#                      o8888888o\n#                      88\" . \"88\n#                      (| -_- |)\n#                      0\\  =  /0\n#                    ___/`---'\\___\n#                  .' \\\\|     |# '.\n#                 / \\\\|||  :  |||# \\\n#                / _||||| -:- |||||- \\\n#               |   | \\\\\\  -  #/  |   |\n#               | \\_|  ''\\---/''  |_/ |\n#               \\  .-\\__  '-'  ___/-. /\n#             ___'. .'  /--.--\\  `. .'___\n#          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\n#         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n#         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\n#     =====`-.____`.___ \\_____/___.-`___.-'=====\n#                       `=---='\n#\n#\n#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\n#               佛祖保佑         永无BUG\n#\n# 天津师范大学 心理与行为研究院 近红外组\n# 夏骁凯 编写\n# 有问题请联系 dddd1007@gmail.com\n\nget_onset_all <- function() {\n  getfilename <- dir()\n  matfilename <- getfilename[stringr::str_detect(getfilename, \".mat|.MAT\")]\n  for (i in matfilename){\n    get_onset(filename = i)\n  }\n}\n",
+    "created" : 1479982025747.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2141818564",
+    "id" : "651B748F",
+    "lastKnownWriteTime" : 1479819954,
+    "last_content_update" : 1479819954,
+    "path" : "~/Documents/Code/TJNU.fnirslab/R/onset/get_onset_all.R",
+    "project_path" : "R/onset/get_onset_all.R",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

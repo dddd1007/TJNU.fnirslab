@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n#                       _oo0oo_\n#                      o8888888o\n#                      88\" . \"88\n#                      (| -_- |)\n#                      0\\  =  /0\n#                    ___/`---'\\___\n#                  .' \\\\|     |# '.\n#                 / \\\\|||  :  |||# \\\n#                / _||||| -:- |||||- \\\n#               |   | \\\\\\  -  #/  |   |\n#               | \\_|  ''\\---/''  |_/ |\n#               \\  .-\\__  '-'  ___/-. /\n#             ___'. .'  /--.--\\  `. .'___\n#          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\n#         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n#         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\n#     =====`-.____`.___ \\_____/___.-`___.-'=====\n#                       `=---='\n#\n#\n#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\n#               佛祖保佑         永无BUG\n#\n# 天津师范大学 心理与行为研究院 近红外组\n# 夏骁凯 编写\n# 有问题请联系 dddd1007@gmail.com\n\nbrain_heatmap <- function(ChNum = NA, ncol = NA, nrow = NA, data = NA) {\n  mapvector <- \n}\n",
+    "created" : 1479864765903.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2494112245",
+    "id" : "87C855EA",
+    "lastKnownWriteTime" : 1479966597,
+    "last_content_update" : 1479976990567,
+    "path" : "~/Documents/Code/TJNU.fnirslab/R/graph/brain_heatmap.R",
+    "project_path" : "R/graph/brain_heatmap.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

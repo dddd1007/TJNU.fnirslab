@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n#                       _oo0oo_\n#                      o8888888o\n#                      88\" . \"88\n#                      (| -_- |)\n#                      0\\  =  /0\n#                    ___/`---'\\___\n#                  .' \\\\|     |# '.\n#                 / \\\\|||  :  |||# \\\n#                / _||||| -:- |||||- \\\n#               |   | \\\\\\  -  #/  |   |\n#               | \\_|  ''\\---/''  |_/ |\n#               \\  .-\\__  '-'  ___/-. /\n#             ___'. .'  /--.--\\  `. .'___\n#          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\n#         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n#         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\n#     =====`-.____`.___ \\_____/___.-`___.-'=====\n#                       `=---='\n#\n#\n#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\n#               佛祖保佑         永无BUG\n#\n# 天津师范大学 心理与行为研究院 近红外组\n# 夏骁凯 编写\n# 有问题请联系 dddd1007@gmail.com\n\nconvert_stat <- function(x = NA){\n  if(is.na(x)) stop(\"Please input your filename!\")\n  rawfile <- readr::read_delim(x, delim = \";\", col_names = FALSE, skip = 8)\n  row_num <- nrow(rawfile)\n  temptable <- as.data.frame(matrix(0, nrow = row_num, ncol = 3))\n  colnames(temptable) <- c(\"CH\", \"Beta\", \"T-statistics\")\n\n  for(i in  1 : row_num){\n    a <- str_split(rawfile$X1[i], pattern = \":\")\n    b <- str_split(a[[1]][1], pattern = \" \")\n    c <- str_split(a[[1]][2], pattern = \", \")\n    temptable[i,1] <- as.numeric(b[[1]][2])\n    temptable[i,2] <- as.numeric(c[[1]][1])\n    temptable[i,3] <- as.numeric(c[[1]][2])\n  }\n\n  temptable <- na.omit(temptable)\n\n  return(temptable)\n}\n",
+    "created" : 1479977195194.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3705545688",
+    "id" : "F37B2FEC",
+    "lastKnownWriteTime" : 1479981055,
+    "last_content_update" : 1479981055836,
+    "path" : "~/Documents/Code/TJNU.fnirslab/R/convertfile/convert_stat.R",
+    "project_path" : "R/convertfile/convert_stat.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
